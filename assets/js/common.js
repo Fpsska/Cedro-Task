@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // /.slider icon active
+
+    let burgerBtn = document.querySelector(".btn--header");
+
+    burgerBtn.addEventListener("click", () => {
+        burgerBtn.classList.add("visible");
+    })
+
+    // /.burger menu
 });
 
 (function () {
