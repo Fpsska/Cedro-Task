@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <title>CEDRO task</title>
+    <link rel="stylesheet" href="assets/css/justValidateTooltip.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+</head>
+
+<body>
+    <svg style="display: none;">
+        <symbol id="phone" viewBox="0 0 24 24">
+            <g>
+                <path
+                    d="M8.66375 6H6.1579C6.1579 6 5.80262 8.74333 6.1579 10.4408C6.59925 12.5495 7.10164 13.8516 8.62501 15.375C10.1484 16.8984 11.4505 17.4007 13.5592 17.8421C15.2567 18.1974 18 17.8421 18 17.8421V15.3363C18 14.4754 17.4491 13.7111 16.6325 13.4389L15.5094 13.0645C15.2293 12.9712 14.9209 13.069 14.7459 13.3069C14.1043 14.1787 12.8226 14.2379 12.1034 13.4288L10.6653 11.8109C10.0139 11.0782 10.0561 9.96226 10.7609 9.28078C10.9633 9.08506 11.0355 8.79056 10.9464 8.52344L10.5611 7.36754C10.2889 6.55086 9.52461 6 8.66375 6Z"
+                    stroke="" stroke-width="1.5" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="phone-footer" viewBox="0 0 16 17">
+            <g>
+                <path
+                    d="M5.95133 7.47489C6.68115 8.75704 7.74296 9.81885 9.02511 10.5487L9.71267 9.58578C9.82323 9.43095 9.98672 9.32202 10.1722 9.27959C10.3576 9.23717 10.5522 9.26419 10.7191 9.35556C11.8191 9.95672 13.0339 10.3183 14.2837 10.4164C14.4787 10.4319 14.6608 10.5203 14.7935 10.664C14.9263 10.8077 15 10.9962 15 11.1919V14.6623C15 14.8549 14.9286 15.0406 14.7996 15.1836C14.6706 15.3266 14.4931 15.4166 14.3016 15.4362C13.8893 15.479 13.474 15.5 13.0556 15.5C6.39778 15.5 1 10.1022 1 3.44444C1 3.026 1.021 2.61067 1.06378 2.19844C1.08342 2.00688 1.17343 1.82941 1.31639 1.70038C1.45935 1.57136 1.64509 1.49996 1.83767 1.5H5.30811C5.50377 1.49998 5.69225 1.5737 5.83597 1.70646C5.9797 1.83923 6.0681 2.02128 6.08356 2.21633C6.18173 3.46606 6.54328 4.68086 7.14444 5.78089C7.23581 5.94777 7.26283 6.14235 7.22041 6.32782C7.17798 6.51328 7.06905 6.67677 6.91422 6.78733L5.95133 7.47489ZM3.98978 6.96389L5.46756 5.90844C5.04816 5.00318 4.76083 4.04243 4.61433 3.05556H2.56333C2.55867 3.18467 2.55633 3.31456 2.55633 3.44444C2.55556 9.24356 7.25644 13.9444 13.0556 13.9444C13.1854 13.9444 13.3153 13.9421 13.4444 13.9367V11.8857C12.4576 11.7392 11.4968 11.4518 10.5916 11.0324L9.53611 12.5102C9.11118 12.3451 8.69845 12.1502 8.301 11.9269L8.25589 11.9012C6.73034 11.033 5.467 9.76966 4.59878 8.24411L4.57311 8.199C4.34982 7.80155 4.15489 7.38882 3.98978 6.96389Z"
+                    fill="" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="search" viewBox="0 0 14 14">
+            <g>
+                <path
+                    d="M9.88889 9.97618C10.98 9.03449 11.6667 7.666 11.6667 6.14286C11.6667 3.30254 9.27885 1 6.33333 1C3.38781 1 1 3.30254 1 6.14286C1 8.98318 3.38781 11.2857 6.33333 11.2857C7.6993 11.2857 8.94532 10.7905 9.88889 9.97618ZM9.88889 9.97618L13 13"
+                    stroke="" stroke-width="1.5" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="favorite" viewBox="0 0 16 15">
+            <g>
+                <path
+                    d="M13.9205 2.06089C13.5784 1.72455 13.1722 1.45775 12.7252 1.27572C12.2782 1.09369 11.799 1 11.3151 1C10.8312 1 10.3521 1.09369 9.90504 1.27572C9.45801 1.45775 9.05185 1.72455 8.70976 2.06089L7.99982 2.75857L7.28988 2.06089C6.5989 1.38184 5.66172 1.00035 4.68453 1.00035C3.70733 1.00035 2.77016 1.38184 2.07917 2.06089C1.38819 2.73994 1 3.66092 1 4.62124C1 5.58157 1.38819 6.50255 2.07917 7.1816L2.78911 7.87928L7.99982 13L13.2105 7.87928L13.9205 7.1816C14.2627 6.84543 14.5342 6.44628 14.7194 6.00697C14.9047 5.56765 15 5.09678 15 4.62124C15 4.14571 14.9047 3.67484 14.7194 3.23552C14.5342 2.79621 14.2627 2.39706 13.9205 2.06089V2.06089Z"
+                    stroke="" stroke-width="1.5" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="store" viewBox="0 0 15 15">
+            <g>
+                <path
+                    d="M4.46667 5.33333H2C1.44772 5.33333 1 5.78105 1 6.33333V13C1 13.5523 1.44772 14 2 14H13C13.5523 14 14 13.5523 14 13V6.33333C14 5.78105 13.5523 5.33333 13 5.33333H10.5333M4.46667 5.33333V8.36667M4.46667 5.33333H10.5333M4.46667 5.33333V4.03333C4.46667 2.35807 5.82474 1 7.5 1V1C9.17526 1 10.5333 2.35807 10.5333 4.03333V5.33333M10.5333 8.36667V5.33333"
+                    stroke="" stroke-width="1.5" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="profile" viewBox="0 0 512 512">
+            <g>
+                <path d="M333.187,237.405c32.761-23.893,54.095-62.561,54.095-106.123C387.282,58.893,328.389,0,256,0
+			S124.718,58.893,124.718,131.282c0,43.562,21.333,82.23,54.095,106.123C97.373,268.57,39.385,347.531,39.385,439.795
+			c0,39.814,32.391,72.205,72.205,72.205H400.41c39.814,0,72.205-32.391,72.205-72.205
+			C472.615,347.531,414.627,268.57,333.187,237.405z M164.103,131.282c0-50.672,41.225-91.897,91.897-91.897
+			s91.897,41.225,91.897,91.897S306.672,223.18,256,223.18S164.103,181.954,164.103,131.282z M400.41,472.615H111.59
+			c-18.097,0-32.82-14.723-32.82-32.821c0-97.726,79.504-177.231,177.231-177.231s177.231,79.504,177.231,177.231
+			C433.231,457.892,418.508,472.615,400.41,472.615z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="email" viewBox="0 0 16 17">
+            <g>
+                <path
+                    d="M2.00065 2.5H14.0007C14.1775 2.5 14.347 2.57024 14.4721 2.69526C14.5971 2.82029 14.6673 2.98986 14.6673 3.16667V13.8333C14.6673 14.0101 14.5971 14.1797 14.4721 14.3047C14.347 14.4298 14.1775 14.5 14.0007 14.5H2.00065C1.82384 14.5 1.65427 14.4298 1.52925 14.3047C1.40422 14.1797 1.33398 14.0101 1.33398 13.8333V3.16667C1.33398 2.98986 1.40422 2.82029 1.52925 2.69526C1.65427 2.57024 1.82384 2.5 2.00065 2.5ZM13.334 5.32533L8.04865 10.0587L2.66732 5.31067V13.1667H13.334V5.32533ZM3.00798 3.83333L8.04132 8.27467L13.002 3.83333H3.00798Z"
+                    fill="" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="clock" viewBox="0 0 14 15">
+            <g>
+                <path
+                    d="M8 1.5C4.1402 1.5 1 4.6402 1 8.5C1 12.3598 4.1402 15.5 8 15.5C11.8598 15.5 15 12.3598 15 8.5C15 4.6402 11.8598 1.5 8 1.5ZM8 14.1C4.9123 14.1 2.4 11.5877 2.4 8.5C2.4 5.4123 4.9123 2.9 8 2.9C11.0877 2.9 13.6 5.4123 13.6 8.5C13.6 11.5877 11.0877 14.1 8 14.1Z"
+                    fill="" />
+                <path d="M8.125 5.375H6.875V8.75875L8.93313 10.8169L9.81687 9.93312L8.125 8.24125V5.375Z" fill="" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="location" viewBox="0 0 16 16">
+            <g>
+                <path
+                    d="M8.00123 9.33272C9.4719 9.33272 10.6679 8.13672 10.6679 6.66606C10.6679 5.19539 9.4719 3.99939 8.00123 3.99939C6.53056 3.99939 5.33456 5.19539 5.33456 6.66606C5.33456 8.13672 6.53056 9.33272 8.00123 9.33272ZM8.00123 5.33272C8.73656 5.33272 9.33456 5.93072 9.33456 6.66606C9.33456 7.40139 8.73656 7.99939 8.00123 7.99939C7.2659 7.99939 6.6679 7.40139 6.6679 6.66606C6.6679 5.93072 7.2659 5.33272 8.00123 5.33272Z"
+                    fill="" />
+                <path
+                    d="M7.61332 14.5427C7.72932 14.6254 7.86465 14.6667 7.99999 14.6667C8.13532 14.6667 8.27065 14.6254 8.38665 14.5427C8.58932 14.3994 13.3527 10.96 13.3333 6.66671C13.3333 3.72604 10.9407 1.33337 7.99999 1.33337C5.05932 1.33337 2.66665 3.72604 2.66665 6.66337C2.64732 10.96 7.41065 14.3994 7.61332 14.5427ZM7.99999 2.66671C10.206 2.66671 12 4.46071 12 6.67004C12.014 9.62871 9.07465 12.2854 7.99999 13.1567C6.92599 12.2847 3.98599 9.62737 3.99999 6.66671C3.99999 4.46071 5.79399 2.66671 7.99999 2.66671Z"
+                    fill="" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="trademark" viewBox="0 0 13 11">
+            <g>
+                <path
+                    d="M5.86248 0H6.44968C6.48556 0 6.51997 0.0133702 6.54535 0.0371692C6.57072 0.0609682 6.58498 0.0932466 6.58498 0.126904V10.8731C6.58498 10.9068 6.57072 10.939 6.54535 10.9628C6.51997 10.9866 6.48556 11 6.44968 11H5.86248C5.09238 11 4.32983 10.8577 3.61838 10.5812C2.90694 10.3047 2.26054 9.89943 1.71612 9.38856C1.17171 8.87769 0.739937 8.27121 0.445479 7.60378C0.15102 6.93635 -0.000354833 6.22105 6.2456e-07 5.49873C6.2456e-07 4.04038 0.617653 2.64175 1.71708 1.61054C2.81651 0.579329 4.30766 0 5.86248 0Z"
+                    fill="" />
+                <path
+                    d="M12.862 0.000976562H8.20093C8.12471 0.000976562 8.06293 0.0589297 8.06293 0.130418V4.68627C8.06293 4.75776 8.12471 4.81571 8.20093 4.81571H12.862C12.9382 4.81571 13 4.75776 13 4.68627V0.130418C13 0.0589297 12.9382 0.000976562 12.862 0.000976562Z"
+                    fill="" />
+                <path
+                    d="M12.862 6.14453H8.20093C8.12471 6.14453 8.06293 6.20248 8.06293 6.27397V10.8666C8.06293 10.9381 8.12471 10.9961 8.20093 10.9961H12.862C12.9382 10.9961 13 10.9381 13 10.8666V6.27397C13 6.20248 12.9382 6.14453 12.862 6.14453Z"
+                    fill="" />
+            </g>
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="heart" viewBox="0 0 22 18">
+            <g>
+                <path
+                    d="M15.8398 0C14.093 0 12.5616 0.778928 11.4113 2.25262C11.2579 2.44917 11.1212 2.64579 11 2.83623C10.8788 2.64575 10.7421 2.44917 10.5887 2.25262C9.43837 0.778928 7.90701 0 6.16016 0C2.8602 0 0.5 2.7631 0.5 6.07868C0.5 9.86988 3.60722 13.4429 10.575 17.664C10.7056 17.7431 10.8528 17.7827 11 17.7827C11.1472 17.7827 11.2944 17.7431 11.425 17.664C18.3928 13.443 21.5 9.86992 21.5 6.07872C21.5 2.76486 19.1417 0 15.8398 0Z"
+                    fill="" />
+            </g>
+        </symbol>
+    </svg>
+
+    <!-- /.svg -->
+    <header class="header navbar-light">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-1">
+                    <div class="header__image">
+                        <img class="header__logo" src="./assets/images/logo.svg" alt="logo">
+                    </div>
+                </div>
+                <!-- /. header column 1 -->
+                <div class="col-6">
+                    <nav class="nav">
+                        <ul class="nav__menu" id="navbar">
+                            <li class="nav__item dropdown">
+                                <a class="nav__link dropdown-toggle" href="#" id="navDropdownFirst" role="button"
+                                    data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Пигменты</a>
+                                <div class="dropdown-menu" aria-labelledby="navDropdownFirst">
+                                    <a class="dropdown-item" href="#">пигмент №1</a>
+                                    <a class="dropdown-item" href="#">пигмент №2</a>
+                                </div>
+                            </li>
+                            <li class="nav__item dropdown">
+                                <a class="nav__link dropdown-toggle" href="#" id="navDropdownSecond" role="button"
+                                    data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Товары для ПМ</a>
+                                <div class="dropdown-menu" aria-labelledby="navDropdownSecond">
+                                    <a class="dropdown-item" href="#">товар №1</a>
+                                    <a class="dropdown-item" href="#">товар №2</a>
+                                </div>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Ремувер</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Акции</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Обучение</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /. header column 2 -->
+                <div class="col-2">
+                    <div class="phone">
+                        <svg class="phone__icon">
+                            <use xlink:href="#phone"></use>
+                        </svg>
+                        <a class="phone__number" href="tel:8 (800) 555-35-35">8 (800) 555-35-35</a>
+                    </div>
+                </div>
+                <!-- /. header column 3 -->
+                <div class="col-2">
+                    <div class="header__icons">
+                        <ul class="icons">
+                            <li class="icons__item">
+                                <svg class="icons__image">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </li>
+                            <li class="icons__item">
+                                <svg class="icons__image">
+                                    <use xlink:href="#favorite"></use>
+                                </svg>
+                            </li>
+                            <li class="icons__item">
+                                <svg class="icons__image">
+                                    <use xlink:href="#store"></use>
+                                </svg>
+                            </li>
+                            <li class="icons__item">
+                                <svg class="icons__image icons__image-profile">
+                                    <use xlink:href="#profile"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /. header column 4 -->
+                <div class="col-1">
+                    <div class="header__button">
+                        <button class="btn--header navbar-toggler shadow-none" type="button" data-toggle="collapse"
+                            data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        </button>
+                    </div>
+                </div>
+                <!-- /. header column 5 -->
+            </div>
+        </div>
+    </header>
+    <!-- /.header -->
+    <main>
+        <div class="section-profile">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2 p-0">
+                        <aside class="aside">
+                            <ul class="aside__menu">
+                                <li class="aside__item">
+                                    <a class="aside__link" href="#">Профиль</a>
+                                </li>
+                                <li class="aside__item">
+                                    <a class="aside__link" href="#">Мои заказы</a>
+                                </li>
+                                <li class="aside__item">
+                                    <a class="aside__link" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <!-- /. section-profile column 1 -->
+                    <div class="col-10">
+                        <div class="profile">
+                            <div class="container-fluid">
+                                <div class="row justify-content-start">
+                                    <div class="col pl-15 pt-0">
+                                        <h2 class="profile__title">Профиль</h2>
+                                    </div>
+                                    <!-- /. profile column 1 -->
+                                    <div class="profile__decoration"></div>
+                                </div>
+                                <div class="row justify-content-start">
+                                    <div class="col-6 pl-15 pt-4">
+                                        <form class="form" id="needs-validation" autocomplete="off" novalidate>
+                                            <fieldset class="form__section-1">
+                                                <legend class="form__title">Данные профиля</legend>
+                                                <div class="form-group">
+                                                    <label class="form__label" for="nameExample">ФИО</label>
+                                                    <input type="text" class="form-control shadow-none form__input"
+                                                        id="nameExample" name="name" autocomplete="off"
+                                                        placeholder="Алексеева Ульяна Евгеньевна" required>
+                                                    <div class="valid-feedback">
+                                                        Заполено корректно
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Не заполнено
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form__label" for="emailExample">Почта</label>
+                                                    <input type="text" class="form-control shadow-none form__input"
+                                                        id="emailExample" name="email" autocomplete="off"
+                                                        placeholder="pochta07@mail.ru" required>
+                                                    <div class="valid-feedback">
+                                                        Заполено корректно
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Введите верный email-адрес.
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form__label" for="numberExample">Телефон</label>
+                                                    <input type="tel" class="form-control shadow-none form__input"
+                                                        id="numberExample" name="tel" autocomplete="off"
+                                                        placeholder="+7 (999) 999-99-99" required>
+                                                    <div class="invalid-feedback">
+                                                        Не заполнено
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form__label" for="nicknameExample">Имя
+                                                        аккаунта</label>
+                                                    <input type="text" class="form-control form__input shadow-none"
+                                                        id="nicknameExample" autocomplete="off" placeholder="Alex Y.E"
+                                                        required>
+                                                    <div class="valid-feedback">
+                                                        Заполено корректно
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Не заполнено
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form__label" for="instagramExample">Профиль в
+                                                        инстаграмм</label>
+                                                    <input type="text" class="form-control form__input shadow-none"
+                                                        id="instagramExample" placeholder="@Alex_YE" required>
+                                                    <div class="valid-feedback">
+                                                        Заполено корректно
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Не заполнено
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-address">
+                                                    <label class="form__label" for="city">Адрес доставки</label>
+                                                    <input type="text" class="form-control shadow-none form__input"
+                                                        id="city" autocomplete="off" placeholder="Город, улица, дом"
+                                                        required>
+                                                    <div class="invalid-feedback">
+                                                        Пожалуйста, укажите корректный адрес доставки
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="row justify-content-center">
+                                                <div class="col-12">
+                                                    <fieldset class="form__section-2">
+                                                        <legend class="form__title">Изменить пароль</legend>
+                                                        <div class="form-group">
+                                                            <label class="form__label password-hidden"
+                                                                for="oldPassword">Старый
+                                                                пароль</label>
+                                                            <input type="password" class="form-control shadow-none"
+                                                                id="oldPassword" autocomplete="off" required>
+                                                            <div class="invalid-feedback">
+                                                                Не заполнено
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-group-password">
+                                                            <label class="form__label" for="newPassword">Новый
+                                                                пароль</label>
+                                                            <input type="password" class="form-control shadow-none"
+                                                                id="newPassword" autocomplete="off"
+                                                                placeholder="Введите новый пароль" required>
+                                                            <div class="invalid-feedback">
+                                                                Не заполнено
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <button type="submit"
+                                                class="btn btn-dark btn-block form__button shadow-none">Сохранить
+                                                изменения</button>
+                                        </form>
+                                        <!-- /. form -->
+                                    </div>
+                                    <!-- /. profile column 2 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /. section-profile column 2 -->
+                </div>
+            </div>
+        </div>
+        <section class="section-goods">
+            <div class="container goods">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col">
+                        <h3 class="goods__title"><span class="gold">Тренды</span> сезона</h3>
+                    </div>
+                    <!-- /. goods column 1 -->
+                    <div class="col">
+                        <div class="goods__button">
+                            <button class="btn--goods">Перейти в каталог</button>
+                            <img class="goods__image" src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </div>
+                    </div>
+                    <!-- /. goods column 2 -->
+                </div>
+                <div class="row">
+                    <div class="w-100">
+                        <div class="slider owl-carousel">
+                            <article class="slider__item">
+                                <div class="slider__header">
+                                    <div class="slider__bar">
+                                        <p class="slider__notice">Sale</p>
+                                        <svg class="slider__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg>
+                                    </div>
+                                    <img class="slider__image" src="./assets/images/goods.png" alt="goods">
+                                </div>
+                                <div class="slider__decoration"></div>
+                                <div class="slider__bottom">
+                                    <h2 class="slider__title">Borwn to Blonde</h2>
+                                    <p class="slider__description">Пигмент для бровей</p>
+                                    <p class="slider__volume">12 ml.</p>
+                                    <div class="slider__price-list">
+                                        <p class="slider__price">1 500 ₽</p>
+                                        <p class="slider__price slider__sale">3 000 ₽</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="slider__item">
+                                <div class="slider__header">
+                                    <div class="slider__bar">
+                                        <p class="slider__notice">Акция 1+1=3</p>
+                                        <svg class="slider__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg>
+                                    </div>
+                                    <img class="slider__image" src="./assets/images/goods.png" alt="goods">
+                                </div>
+                                <div class="slider__decoration slider__decoration-orange"></div>
+                                <div class="slider__bottom">
+                                    <h2 class="slider__title">Borwn to Blonde</h2>
+                                    <p class="slider__description">Пигмент для бровей</p>
+                                    <p class="slider__volume">12 ml.</p>
+                                    <div class="slider__price-list">
+                                        <p class="slider__price">1 500 ₽</p>
+                                        <p class="slider__price slider__sale">3 000 ₽</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="slider__item">
+                                <div class="slider__header">
+                                    <div class="slider__bar">
+                                        <p class="slider__notice">Sale</p>
+                                        <svg class="slider__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg>
+                                    </div>
+                                    <img class="slider__image" src="./assets/images/goods.png" alt="goods">
+                                </div>
+                                <div class="slider__decoration slider__decoration-lightred"></div>
+                                <div class="slider__bottom">
+                                    <h2 class="slider__title">Borwn to Blonde</h2>
+                                    <p class="slider__description">Пигмент для бровей</p>
+                                    <p class="slider__volume">12 ml.</p>
+                                    <div class="slider__price-list">
+                                        <p class="slider__price">1 500 ₽</p>
+                                        <p class="slider__price slider__sale">3 000 ₽</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="slider__item">
+                                <div class="slider__header">
+                                    <div class="slider__bar">
+                                        <p class="slider__notice">Бесплатная доставка</p>
+                                        <svg class="slider__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg>
+                                    </div>
+                                    <img class="slider__image" src="./assets/images/goods.png" alt="goods">
+                                </div>
+                                <div class="slider__decoration slider__decoration-orange"></div>
+                                <div class="slider__bottom">
+                                    <h2 class="slider__title">Borwn to Blonde</h2>
+                                    <p class="slider__description">Пигмент для бровей</p>
+                                    <p class="slider__volume">12 ml.</p>
+                                    <div class="slider__price-list">
+                                        <p class="slider__price">1 500 ₽</p>
+                                        <p class="slider__price slider__sale">3 000 ₽</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- /.main -->
+    <footer class="footer fixed-bottom">
+        <div class="container">
+            <div class="row footer__section-1">
+                <div class="col-4">
+                    <ul class="footer__column footer__column-first">
+                        <li class="footer__item"><a class="footer__link footer__title" href="#">Продукция</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Аппараты</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Иглы</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Расходные материалы</a></li>
+                    </ul>
+                </div>
+                <!-- /. footer__section-1 column 1 -->
+                <div class="col-4">
+                    <ul class="footer__column footer__column-second">
+                        <li class="footer__item"><a class="footer__link footer__title" href="#">Компания</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Блог</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Обучение</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Стать представителем</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <!-- /. footer__section-1 column 2 -->
+                <div class="col-4">
+                    <ul class="footer__column footer__column-third">
+                        <li class="footer__item">
+                            <a class="footer__link footer__title" href="#">Контакты</a>
+                        </li>
+                        <li class="footer__item">
+                            <svg class="phone__icon phone__image-footer">
+                                <use xlink:href="#phone-footer"></use>
+                            </svg>
+                            <a class="footer__link" href="tel:8 (800) 555-35-35">8 (800) 555-35-35</a>
+                        </li>
+                        <li class="footer__item">
+                            <svg class="footer__svg">
+                                <use xlink:href="#email"></use>
+                            </svg>
+                            <a class="footer__link" href="mailto:cedro@yandex.ru">cedro@yandex.ru</a>
+                        </li>
+                        <li class="footer__item">
+                            <svg class="footer__svg">
+                                <use xlink:href="#clock"></use>
+                            </svg>
+                            <a class="footer__link" href="#">Время работы: пн - пт с 10 до 19</a>
+                        </li>
+                        <li class="footer__item">
+                            <svg class="footer__svg">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            <a class="footer__link" href="#">г. Санкт-Петербург, м. Звёздная</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /. footer__section-1 column 3 -->
+            </div>
+            <div class="row footer__section-2 align-items-center">
+                <div class="col">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="https://vk.com/feed" target="_blank" rel="nofollow">
+                                <img class="social__image" src="./assets/images/vk.svg" alt="vk">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="https://ru-ru.facebook.com/" target="_blank" rel="nofollow">
+                                <img class="social__image" src="./assets/images/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="https://www.instagram.com/" target="_blank" rel="nofollow">
+                                <img class="social__image" src="./assets/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /. footer__section-2 column 1 -->
+                <div class="col">
+                    <p class="footer__copyright">
+                        © ООО «Cedro» - все права защищены, 2000—2021”
+                    </p>
+                </div>
+                <!-- /. footer__section-2 column 2 -->
+                <div class="col">
+                    <div class="trademark">
+                        <p class="trademark__text">Сделано в Cedro</p>
+                        <svg class="trademark__image">
+                            <use xlink:href="#trademark"></use>
+                        </svg>
+                    </div>
+                </div>
+                <!-- /. footer__section-2 column 3 -->
+            </div>
+            <div class="row footer__section-3">
+                <div class="w-100">
+                    <p class="footer__information">
+                        Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный
+                        характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи
+                        437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации о наличии
+                        и актуальной стоимости указанных на сайте услуг обращайтесь, пожалуйста, по телефонам клиник.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/just-validate.js"></script>
+    <script src="./assets/js/owl.carousel.js"></script>
+    <script src="./assets/js/inputmask.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <!-- /. SCRIPTS -->
+</body>
+
+</html>
