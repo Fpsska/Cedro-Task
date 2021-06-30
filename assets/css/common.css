@@ -36,14 +36,15 @@ svg {
     fill: var(--secondary-color);
 }
 
+.pl-15 {
+    padding-left: 150px !important;
+}
+
 :root {
     --primary-color: #21242e;
     --secondary-color: #fff;
     --gold-color: #d0bc7a;
     --red-color: #eb5757;
-}
-.pl-15 {
-    padding-left: 150px !important;
 }
 
 .header__image {
@@ -103,6 +104,7 @@ svg {
     background-color: var(--gold-color);
 }
 
+
 .section-profile {
     border-bottom: 1px solid #e4e4e4;
 }
@@ -110,6 +112,7 @@ svg {
 .sectiob-trends {
     padding-top: 60px;
 }
+
 
 .nav__menu {
     display: flex;
@@ -124,6 +127,7 @@ svg {
 .nav__item:nth-child(1) {
     margin-left: 0;
 }
+
 
 .icons {
     display: flex;
@@ -155,6 +159,7 @@ svg {
     margin-left: 0;
 }
 
+
 .phone {
     display: flex;
     align-items: center;
@@ -164,30 +169,30 @@ svg {
     transition: 0.4s linear;
 }
 .phone__icon {
-    width: 24px;
-    height: 24px;
-    stroke: var(--gold-color);
+    width: 16px;
+    height: 16px;
+    fill: var(--gold-color);
     display: block;
+    margin-right: 8px;
     transition: 0.4s linear;
 }
 .phone:hover * {
-    color: #21242e;
-    stroke: #21242e;
+    color: var(--primary-color);
+    fill: var(--primary-color);
     transition: 0.4s linear;
 }
-.phone__image-footer {
-    stroke: var(--secondary-color);
+.phone__icon-footer {
+    fill: var(--secondary-color);
+}
+.phone__icon-menu {
     fill: var(--primary-color);
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    display: block;
 }
 .phone-footer:hover * {
     color: var(--gold-color);
-    stroke: var(--gold-color);
+    fill: var(--gold-color) ;
     transition: 0.4s linear;
 }
+
 
 .aside {
     border-right: 1px solid #e4e4e4;
@@ -207,6 +212,7 @@ svg {
     margin-bottom: 0;
 }
 
+
 .profile .container-fluid {
     padding: 0 !important;
 }
@@ -220,6 +226,7 @@ svg {
 .profile__decoration {
     border-bottom: 1px solid #e4e4e4;
 }
+
 
 .form {
     padding: 56px 0 100px 0;
@@ -245,6 +252,7 @@ svg {
     margin: 0;
 }
 
+
 .form__input {
     margin-top: 8px;
 }
@@ -252,21 +260,6 @@ svg {
     outline: none !important;
     border: none !important;
 }
-
-/* input::-webkit-input-placeholder {
-    color: var(--red-color) !important;
-}
-
-input:-moz-placeholder { 
-    color:    var(--red-color) !important;
-}
-input::-moz-placeholder { 
-    color:   var(--red-color) !important;
-}
-input:-ms-input-placeholder { 
-    color:   var(--red-color) !important;
-} */
-
 .form__button {
     max-width: 230px;
     width: 100%;
@@ -295,8 +288,22 @@ input:-ms-input-placeholder {
 .form__section-2:hover::before {
     opacity: 1;
 }
+/* input::-webkit-input-placeholder {
+    color: var(--red-color) !important;
+}
+
+input:-moz-placeholder { 
+    color:    var(--red-color) !important;
+}
+input::-moz-placeholder { 
+    color:   var(--red-color) !important;
+}
+input:-ms-input-placeholder { 
+    color:   var(--red-color) !important;
+} */
 
 /* /.main */
+
 
 .footer {
     background-color: #131511;
@@ -325,7 +332,7 @@ input:-ms-input-placeholder {
 }
 .footer__item:hover * {
     color: var(--gold-color);
-    stroke: var(--gold-color);
+    fill: var(--gold-color);
     transition: 0.4s linear;
 }
 .footer__link {
@@ -397,6 +404,8 @@ input:-ms-input-placeholder {
     cursor: pointer;
 }
 /* /.одниковые стили */
+
+
 .trademark {
     display: flex;
     justify-content: flex-end;
@@ -422,6 +431,8 @@ input:-ms-input-placeholder {
     transition: 0.4s linear;
     display: block;
 }
+
+
 
 .social {
     display: flex;
@@ -452,6 +463,7 @@ input:-ms-input-placeholder {
     margin-right: 0;
 }
 
+
 .section-goods {
     padding: 100px 0;
 }
@@ -472,6 +484,7 @@ input:-ms-input-placeholder {
 .gold {
     color: var(--gold-color);
 }
+
 
 .slider {
     display: flex !important;
@@ -573,6 +586,7 @@ input:-ms-input-placeholder {
     opacity: 0.4;
 }
 
+
 .burger {
     min-height: 768px;
     position: relative;
@@ -591,7 +605,6 @@ input:-ms-input-placeholder {
 .burger .footer__svg {
     fill: var(--primary-color) !important;
 }
-
 .burger .footer__item:hover * {
     color: var(--gold-color);
     fill: var(--gold-color);
@@ -610,6 +623,9 @@ input:-ms-input-placeholder {
     color: var(--gold-color);
     stroke: var(--gold-color);
 }
+
+/* /. STYLES */
+
 
 @font-face {
     font-family: "TTNorms-Medium";
