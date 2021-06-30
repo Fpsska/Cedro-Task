@@ -3,9 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
         items: 4.2,
         loop: true,
         responsive: {
+            320: {
+                items: 1,
+                margin: 0,
+                center: true,
+            },
+            375: {
+                items: 1.5,
+                margin: 20,
+            },
+            540: {
+                items: 2,
+                margin: 20,
+            },
+            768: {
+                items: 2.5,
+                margin: 20,
+            },
+            992: {
+                items: 3.5,
+                margin: 20,
+            },
             1280: {
                 margin: 10,
-            }
+            },
         },
     });
 
@@ -51,9 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }, false);
         }, false);
     }
-    
+
     validationFunction();
-    
+
     // /.validation
 });
 

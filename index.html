@@ -156,19 +156,19 @@
     <!-- /.svg -->
     <header class="header navbar-light">
         <div class="container-fluid">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-1">
+            <div class="row align-items-center header__bar">
+                <div class="col-xl-1 col-sm-4 header__column">
                     <div class="header__image">
                         <img class="header__logo" src="./assets/images/logo.svg" alt="logo">
                     </div>
                 </div>
                 <!-- /. header column 1 -->
-                <div class="col-6">
+                <div class="col-xxl-6 col-xl-7 d-xl-block d-none">
                     <nav class="nav">
                         <ul class="nav__menu" id="navbar">
                             <li class="nav__item dropdown">
                                 <a class="nav__link dropdown-toggle" href="#" id="navDropdownFirst" role="button"
-                                    data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Пигменты</a>
+                                    data-bs-toggle="dropdown" aria-expanded="false">Пигменты</a>
                                 <div class="dropdown-menu" aria-labelledby="navDropdownFirst">
                                     <a class="dropdown-item" href="#">пигмент №1</a>
                                     <a class="dropdown-item" href="#">пигмент №2</a>
@@ -176,7 +176,7 @@
                             </li>
                             <li class="nav__item dropdown">
                                 <a class="nav__link dropdown-toggle" href="#" id="navDropdownSecond" role="button"
-                                    data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Товары для ПМ</a>
+                                    data-bs-toggle="dropdown" aria-expanded="false">Товары для ПМ</a>
                                 <div class="dropdown-menu" aria-labelledby="navDropdownSecond">
                                     <a class="dropdown-item" href="#">товар №1</a>
                                     <a class="dropdown-item" href="#">товар №2</a>
@@ -195,7 +195,7 @@
                     </nav>
                 </div>
                 <!-- /. header column 2 -->
-                <div class="col-2">
+                <div class="col-2 d-xxl-block d-none">
                     <div class="phone">
                         <svg class="phone__icon">
                             <use xlink:href="#phone-menu"></use>
@@ -204,7 +204,7 @@
                     </div>
                 </div>
                 <!-- /. header column 3 -->
-                <div class="col-2">
+                <div class="col-xl-2 col-sm-4 header__column">
                     <div class="header__icons">
                         <ul class="icons">
                             <li class="icons__item">
@@ -231,12 +231,9 @@
                     </div>
                 </div>
                 <!-- /. header column 4 -->
-                <div class="col-1">
+                <div class="col-xl-1 col-sm-4 header__column">
                     <div class="header__button">
-                        <button class="btn--header navbar-toggler shadow-none" type="button" data-toggle="collapse"
-                            data-target="#navbar" aria-controls="navbar" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        </button>
+                        <button class="btn--header navbar-toggler shadow-none" type="button"></button>
                     </div>
                 </div>
                 <!-- /. header column 5 -->
@@ -248,7 +245,7 @@
         <div class="section-profile">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-2 p-0">
+                    <div class="col-md-2 col-sm-12 p-0">
                         <aside class="aside">
                             <ul class="aside__menu">
                                 <li class="aside__item">
@@ -264,7 +261,7 @@
                         </aside>
                     </div>
                     <!-- /. section-profile column 1 -->
-                    <div class="col-10">
+                    <div class="col-md-10 col-sm-12">
                         <div class="profile">
                             <div class="container-fluid">
                                 <div class="row justify-content-start">
@@ -374,9 +371,13 @@
                                                     </fieldset>
                                                 </div>
                                             </div>
-                                            <button type="submit"
-                                                class="btn btn-dark btn-block form__button shadow-none">Сохранить
-                                                изменения</button>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <button type="submit"
+                                                        class="btn btn-dark btn-block form__button shadow-none">Сохранить
+                                                        изменения</button>
+                                                </div>
+                                            </div>
                                         </form>
                                         <!-- /. form -->
                                     </div>
@@ -391,12 +392,12 @@
         </div>
         <section class="section-goods">
             <div class="container goods">
-                <div class="row align-items-center justify-content-between">
+                <div class="row align-items-center justify-content-between mb-5 mb-sm-4">
                     <div class="col">
                         <h3 class="goods__title"><span class="gold">Тренды</span> сезона</h3>
                     </div>
                     <!-- /. goods column 1 -->
-                    <div class="col">
+                    <div class="col-sm-6 d-md-block d-sm-none">
                         <div class="goods__button">
                             <button class="btn--goods">Перейти в каталог</button>
                             <img class="goods__image" src="./assets/images/arrow-right.svg" alt="arrow-right">
@@ -497,14 +498,23 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row mt-5">
+                    <div class="col-sm-12 d-sm-block d-md-none">
+                        <div class="goods__button goods__button-mobile">
+                            <button class="btn--goods">Перейти в каталог</button>
+                            <img class="goods__image" src="./assets/images/arrow-right.svg" alt="arrow-right">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     <!-- /.main -->
     <footer class="footer fixed-bottom">
         <div class="container">
-            <div class="row footer__section-1">
-                <div class="col-4">
+            <div class="row footer__section-1 justify-content-center">
+                <div class="col-md-4 col-sm-12">
                     <ul class="footer__column footer__column-first">
                         <li class="footer__item"><a class="footer__link footer__title" href="#">Продукция</a></li>
                         <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
@@ -515,7 +525,7 @@
                     </ul>
                 </div>
                 <!-- /. footer__section-1 column 1 -->
-                <div class="col-4">
+                <div class="col-md-4 col-sm-12">
                     <ul class="footer__column footer__column-second">
                         <li class="footer__item"><a class="footer__link footer__title" href="#">Компания</a></li>
                         <li class="footer__item"><a class="footer__link" href="#">Блог</a></li>
@@ -526,7 +536,7 @@
                     </ul>
                 </div>
                 <!-- /. footer__section-1 column 2 -->
-                <div class="col-4">
+                <div class="col-md-4 col-sm-12">
                     <ul class="footer__column footer__column-third">
                         <li class="footer__item">
                             <a class="footer__link footer__title" href="#">Контакты</a>
@@ -560,7 +570,7 @@
                 <!-- /. footer__section-1 column 3 -->
             </div>
             <div class="row footer__section-2 align-items-center">
-                <div class="col">
+                <div class="col-md-3 px-0">
                     <ul class="social">
                         <li class="social__item">
                             <a class="social__link" href="https://vk.com/feed" target="_blank" rel="nofollow">
@@ -580,13 +590,13 @@
                     </ul>
                 </div>
                 <!-- /. footer__section-2 column 1 -->
-                <div class="col">
-                    <p class="footer__copyright">
+                <div class="col-md-6 px-0 footer__copyright">
+                    <p class="footer__copyright-text">
                         © ООО «Cedro» - все права защищены, 2000—2021”
                     </p>
                 </div>
                 <!-- /. footer__section-2 column 2 -->
-                <div class="col">
+                <div class="col-md-3 px-0">
                     <div class="trademark">
                         <p class="trademark__text">Сделано в Cedro</p>
                         <svg class="trademark__image">
@@ -596,7 +606,7 @@
                 </div>
                 <!-- /. footer__section-2 column 3 -->
             </div>
-            <div class="row footer__section-3">
+            <div class="row align-items-center footer__section-3">
                 <div class="col-12">
                     <p class="footer__information">
                         Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный
@@ -625,12 +635,20 @@
                                         <li class="footer__item"><a class="footer__link footer__title"
                                                 href="#">Продукция</a>
                                         </li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Аппараты</a></li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Иглы</a></li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Расходные
-                                                материалы</a>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Пигменты</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Пигменты</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Аппараты</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Иглы</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Расходные материалы</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -640,14 +658,21 @@
                                         <li class="footer__item"><a class="footer__link footer__title"
                                                 href="#">Компания</a>
                                         </li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Блог</a></li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Обучение</a></li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Стать
-                                                представителем</a>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Блог</a>
                                         </li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
-                                        <li class="footer__item"><a class="footer__link" href="#">Политика
-                                                конфиденциальности</a></li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Обучение</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Стать представителем</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Контакты</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a class="footer__link" href="#">Политика конфиденциальности</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <!-- /. footer__section-1 column 2 -->
@@ -692,15 +717,8 @@
     </div>
 
     <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
     <script src="./assets/js/just-validate.js"></script>
     <script src="./assets/js/owl.carousel.js"></script>
     <script src="./assets/js/inputmask.js"></script>

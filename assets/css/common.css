@@ -37,7 +37,7 @@ svg {
 }
 
 .pl-15 {
-    padding-left: 150px !important;
+    padding-left: 150px;
 }
 
 :root {
@@ -47,14 +47,15 @@ svg {
     --red-color: #eb5757;
 }
 
-.header__image {
-    display: flex;
-    place-items: center;
-}
 .header {
     border-bottom: 1px solid #e4e4e4;
     padding: 18px 32px;
 }
+.header__image {
+    display: flex;
+    place-items: center;
+}
+
 
 .heder__logo {
     transition: 0.4s linear;
@@ -132,6 +133,7 @@ svg {
 .icons {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .icons__image {
     stroke: var(--gold-color);
@@ -230,7 +232,6 @@ svg {
 
 .form {
     padding: 56px 0 100px 0;
-    min-width: 343px;
     max-width: 700px;
 }
 .form__title {
@@ -359,7 +360,7 @@ input:-ms-input-placeholder {
     opacity: 1 !important;
 }
 .footer__section-1 {
-    padding: 64px;
+    padding: 64px 0;
 }
 .footer__section-2 {
     padding: 24px 0;
@@ -382,15 +383,18 @@ input:-ms-input-placeholder {
 }
 /* одниковые стили */
 .footer__copyright {
+    text-align: center;
+}
+.footer__copyright-text:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.footer__copyright-text {
     font-family: "TTNorms-Regular";
     font-size: 14px;
     color: var(--secondary-color);
     opacity: 0.4;
     transition: 0.4s linear;
-}
-.footer__copyright:hover {
-    opacity: 1;
-    cursor: pointer;
 }
 .footer__information {
     font-family: "TTNorms-Regular";
@@ -471,10 +475,12 @@ input:-ms-input-placeholder {
     font-family: "TTNorms-Medium";
     font-size: 48px;
     text-transform: uppercase;
-    margin-bottom: 48px;
 }
 .goods__button {
     text-align: end;
+}
+.goods__button-mobile {
+    text-align: start;
 }
 .btn--goods {
     font-family: "TTNorms-Medium";
@@ -590,6 +596,7 @@ input:-ms-input-placeholder {
 .burger {
     min-height: 768px;
     position: relative;
+    display: none;
 }
 .burger .header {
     position: absolute;
