@@ -231,9 +231,10 @@
                     </div>
                 </div>
                 <!-- /. header column 4 -->
-                <div class="col-xl-1 col-sm-4 header__column">
+                <div class="col-xl-2 col-sm-4 header__column">
                     <div class="header__button">
-                        <button class="btn--header navbar-toggler shadow-none" type="button"></button>
+                        <button class="btn--header btn--open visible navbar-toggler shadow-none" type="button"></button>
+                        <button class="btn--header btn--close navbar-toggler shadow-none" type="button"></button>
                     </div>
                 </div>
                 <!-- /. header column 5 -->
@@ -241,7 +242,7 @@
         </div>
     </header>
     <!-- /.header -->
-    <main>
+    <main class="main">
         <div class="section-profile">
             <div class="container-fluid">
                 <div class="row">
@@ -513,6 +514,7 @@
     <!-- /.main -->
     <footer class="footer fixed-bottom">
         <div class="container">
+
             <div class="row footer__section-1 justify-content-center">
                 <div class="col-md-4 col-sm-12">
                     <ul class="footer__column footer__column-first">
@@ -569,6 +571,7 @@
                 </div>
                 <!-- /. footer__section-1 column 3 -->
             </div>
+
             <div class="row footer__section-2 align-items-center">
                 <div class="col-md-3 px-0">
                     <ul class="social">
@@ -621,93 +624,79 @@
 
 
     <div class="burger">
-        <div class="header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="header__image">
-                            <img class="header__logo" src="./assets/images/logo.svg" alt="logo">
-                        </div>
-                        <div class="container">
-                            <div class="row footer__section-1">
-                                <div class="col-4">
-                                    <ul class="footer__column footer__column-first">
-                                        <li class="footer__item"><a class="footer__link footer__title"
-                                                href="#">Продукция</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Пигменты</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Пигменты</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Аппараты</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Иглы</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Расходные материалы</a>
-                                        </li>
-                                    </ul>
+        <div class="header__image">
+            <img class="header__logo" src="./assets/images/logo.svg" alt="logo">
+        </div>
+        <div class="burger__wrapper">
+            <div class="header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container">
+                                <div class="row footer__section-1 justify-content-center">
+                                    <div class="col-md-4 col-sm-12 footer__column-menu">
+                                        <ul class="footer__column footer__column-first">
+                                            <li class="footer__item"><a class="footer__link footer__title"
+                                                    href="#">Продукция</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Аппараты</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Иглы</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Расходные
+                                                    материалы</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /. footer__section-1 column 1 -->
+                                    <div class="col-md-4 col-sm-12 footer__column-menu">
+                                        <ul class="footer__column footer__column-second">
+                                            <li class="footer__item"><a class="footer__link footer__title"
+                                                    href="#">Компания</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Блог</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Обучение</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Стать
+                                                    представителем</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Политика
+                                                    конфиденциальности</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /. footer__section-1 column 2 -->
+                                    <div class="col-md-4 col-sm-12 footer__column-menu">
+                                        <ul class="footer__column footer__column-third">
+                                            <li class="footer__item">
+                                                <a class="footer__link footer__title" href="#">Контакты</a>
+                                            </li>
+                                            <li class="footer__item">
+                                                <svg class="phone__icon phone__icon-menu">
+                                                    <use xlink:href="#phone-menu"></use>
+                                                </svg>
+                                                <a class="footer__link" href="tel:8 (800) 555-35-35">8 (800)
+                                                    555-35-35</a>
+                                            </li>
+                                            <li class="footer__item">
+                                                <svg class="footer__svg">
+                                                    <use xlink:href="#email-menu"></use>
+                                                </svg>
+                                                <a class="footer__link"
+                                                    href="mailto:cedro@yandex.ru">cedro@yandex.ru</a>
+                                            </li>
+                                            <li class="footer__item">
+                                                <svg class="footer__svg">
+                                                    <use xlink:href="#clock-menu"></use>
+                                                </svg>
+                                                <a class="footer__link" href="#">Время работы: пн - пт с 10 до 19</a>
+                                            </li>
+                                            <li class="footer__item">
+                                                <svg class="footer__svg">
+                                                    <use xlink:href="#location-menu"></use>
+                                                </svg>
+                                                <a class="footer__link" href="#">г. Санкт-Петербург, <br> м.
+                                                    Звёздная</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /. footer__section-1 column 3 -->
                                 </div>
-                                <!-- /. footer__section-1 column 1 -->
-                                <div class="col-4">
-                                    <ul class="footer__column footer__column-second">
-                                        <li class="footer__item"><a class="footer__link footer__title"
-                                                href="#">Компания</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Блог</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Обучение</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Стать представителем</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Контакты</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <a class="footer__link" href="#">Политика конфиденциальности</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /. footer__section-1 column 2 -->
-                                <div class="col-4">
-                                    <ul class="footer__column footer__column-third">
-                                        <li class="footer__item">
-                                            <a class="footer__link footer__title" href="#">Контакты</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <svg class="phone__icon phone__icon-footer phone__icon-menu">
-                                                <use xlink:href="#phone-menu"></use>
-                                            </svg>
-                                            <a class="footer__link" href="tel:8 (800) 555-35-35">8 (800) 555-35-35</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <svg class="footer__svg">
-                                                <use xlink:href="#email-menu"></use>
-                                            </svg>
-                                            <a class="footer__link" href="mailto:cedro@yandex.ru">cedro@yandex.ru</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <svg class="footer__svg">
-                                                <use xlink:href="#clock-menu"></use>
-                                            </svg>
-                                            <a class="footer__link" href="#">Время работы: пн - пт с 10 до 19</a>
-                                        </li>
-                                        <li class="footer__item">
-                                            <svg class="footer__svg">
-                                                <use xlink:href="#location-menu"></use>
-                                            </svg>
-                                            <a class="footer__link" href="#">г. Санкт-Петербург, <br> м. Звёздная</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /. footer__section-1 column 3 -->
                             </div>
                         </div>
                     </div>

@@ -52,9 +52,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // /.slider icon active
 
     let burgerBtn = document.querySelector(".btn--header");
+    let burgerOpen = document.querySelector(".btn--open");
+    let burgerClose = document.querySelector(".btn--close");
+    let burgerMenu = document.querySelector(".burger");
 
-    burgerBtn.addEventListener("click", () => {
-        burgerBtn.classList.add("visible");
+    burgerOpen.addEventListener("click", () => {
+        burgerOpen.classList.remove("visible");
+        burgerClose.classList.add("visible");
+        burgerMenu.classList.add("visible");
+        document.body.style.overflowY = "hidden";
+    })
+    
+    burgerClose.addEventListener("click", () => {
+        burgerOpen.classList.add("visible");
+        burgerClose.classList.remove("visible");
+        burgerMenu.classList.remove("visible");
+        document.body.style.overflowY = "auto";
     })
 
     // /.burger menu
