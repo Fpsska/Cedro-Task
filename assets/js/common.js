@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // /.slider icon active
-
-    let burgerBtn = document.querySelector(".btn--header");
+    
     let burgerOpen = document.querySelector(".btn--open");
     let burgerClose = document.querySelector(".btn--close");
     let burgerMenu = document.querySelector(".burger");
@@ -91,24 +90,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // /.validation
 });
 
-
-
-
-
-
-
-
-// (function () {
-//     'use strict';
-//     window.addEventListener('load', function () {
-//         let form = document.getElementById('needs-validation');
-//         form.addEventListener('submit', function (event) {
-//             if (form.checkValidity() === false) {
-//                 event.preventDefault();
-//                 event.stopPropagation();
-//             }
-//             form.classList.add('was-validated');
-//         }, false);
-//     }, false);
-// })();
 
