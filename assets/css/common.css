@@ -14,8 +14,6 @@ button {
 a {
     text-decoration: none;
     color: var(--primary-color);
-    font-family: "TTNorms-Medium";
-    font-size: 14px;
 }
 a:hover {
     color: var(--gold-color);
@@ -167,6 +165,7 @@ svg {
 }
 .nav__link {
     transition: 0.4s linear;
+    font-family: "TTNorms-Medium";
 }
 .nav__item:nth-child(1) {
     margin-left: 0;
@@ -252,6 +251,7 @@ svg {
 }
 .aside__link {
     transition: 0.4s linear;
+    font-family: "TTNorms-Medium";
 }
 .aside__item:nth-child(3) {
     margin-bottom: 0;
@@ -348,10 +348,12 @@ svg {
     margin-right: 0;
 }
 
-
 .section-goods {
-    padding: 100px 0;
+    padding: 100px 0 0 80px;
 }
+/* .section-goods .container-fluid {
+    padding-: 0 !important;
+} */
 .goods__title {
     font-family: "TTNorms-Medium";
     font-size: 48px;
@@ -372,7 +374,6 @@ svg {
     color: var(--gold-color);
 }
 
-
 .slider {
     display: flex !important;
     flex-direction: row !important;
@@ -385,7 +386,7 @@ svg {
     transition: 0.4s linear;
 }
 .slider__item:hover {
-    border: 1px solid var(--primary-color);
+    border: 1px solid rgba(33, 36, 46, 0.2);
 }
 .slider__header {
     position: relative;
@@ -450,20 +451,20 @@ svg {
     color: var(--gold-color);
 }
 .slider__title {
-    font-family: "PFRegalDisplayPro-MediumItalic";
-    font-size: 18px;
+    font-family: "PFRegalDisplayPro-MediumItalic" !important;
+    font-size: 18px !important;
 }
 .slider__description {
-    font-family: "TTNorms-Regular";
-    font-size: 14px;
+    font-family: "TTNorms-Regular" !important;
+    font-size: 14px !important;
 }
 .slider__volume {
-    font-family: "TTNorms-Regular";
-    font-size: 14px;
+    font-family: "TTNorms-Regular" !important;
+    font-size: 14px !important;
 }
+
 .slider__price-list {
-    display: flex;
-    font-family: "PFRegalDisplayPro-MediumItalic";
+    font-family: "PFRegalDisplayPro-MediumItalic" !important;
     font-size: 18px;
     margin-top: 8px;
 }
@@ -474,7 +475,6 @@ svg {
 }
 
 /* /. main styles */
-
 
 .footer {
     background-color: #131511;
@@ -577,7 +577,6 @@ svg {
     cursor: pointer;
 }
 
-
 .trademark {
     display: flex;
     justify-content: flex-end;
@@ -605,9 +604,6 @@ svg {
 }
 
 /* /. footer styles */
-
-
-
 
 .main {
     position: relative;
@@ -691,8 +687,6 @@ svg {
 
 /* /. burger styles */
 
-
-
 /* /. STYLES */
 
 @font-face {
@@ -715,6 +709,5 @@ svg {
     font-style: normal;
     font-weight: normal;
 }
-
 
 /* /. fonts */

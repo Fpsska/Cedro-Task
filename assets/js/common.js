@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 margin: 20,
             },
             1280: {
-                margin: 10,
+                margin: -600,
             },
         },
     });
