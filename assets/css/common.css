@@ -349,11 +349,8 @@ svg {
 }
 
 .section-goods {
-    padding: 100px 0 0 80px;
+    padding: 124px 0 64px 0;
 }
-/* .section-goods .container-fluid {
-    padding-: 0 !important;
-} */
 .goods__title {
     font-family: "TTNorms-Medium";
     font-size: 48px;
@@ -361,6 +358,7 @@ svg {
 }
 .goods__button {
     text-align: end;
+    padding-right: 100px;
 }
 .goods__button-mobile {
     text-align: start;
