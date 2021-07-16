@@ -1,3 +1,26 @@
+@font-face {
+    font-family: "TTNorms-Medium";
+    src: url("../fonts/TTNorms-Medium.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "TTNorms-Regular";
+    src: url("../fonts/TTNorms-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PFRegalDisplayPro-MediumItalic";
+    src: url("../fonts/PFRegalDisplayPro-MediumItalic.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* /. fonts */
+
 ul,
 li,
 p {
@@ -55,11 +78,21 @@ svg {
     border-bottom: 1px solid #e4e4e4;
     padding: 18px 32px;
 }
+.header__bar {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+}
+.header__column {
+    flex-grow: 1 !important;
+}
+.header__column:nth-child(2) {
+    flex-grow: 2;
+}
 .header__image {
     display: flex;
     place-items: center;
 }
-
 .heder__logo {
     transition: 0.4s linear;
 }
@@ -685,25 +718,4 @@ svg {
 
 /* /. STYLES */
 
-@font-face {
-    font-family: "TTNorms-Medium";
-    src: url("../fonts/TTNorms-Medium.woff") format("woff");
-    font-style: normal;
-    font-weight: normal;
-}
 
-@font-face {
-    font-family: "TTNorms-Regular";
-    src: url("../fonts/TTNorms-Regular.woff") format("woff");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "PFRegalDisplayPro-MediumItalic";
-    src: url("../fonts/PFRegalDisplayPro-MediumItalic.woff") format("woff");
-    font-style: normal;
-    font-weight: normal;
-}
-
-/* /. fonts */

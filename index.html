@@ -154,86 +154,76 @@
     <!-- /.svg -->
     <header class="header navbar-light">
         <div class="container-fluid">
-            <div class="row align-items-center header__bar">
-                <div class="col-xl-1 col-sm-4 header__column">
-                    <div class="header__image">
-                        <img class="header__logo" src="./assets/images/logo.svg" alt="logo">
-                    </div>
+            <div class="header__bar">
+                <div class="header__image header__column">
+                    <img class="header__logo" src="./assets/images/logo.svg" alt="logo">
                 </div>
                 <!-- /. header column 1 -->
-                <div class="col-xxl-6 col-xl-7 d-xl-block d-none">
-                    <nav class="nav">
-                        <ul class="nav__menu" id="navbar">
-                            <li class="nav__item dropdown">
-                                <a class="nav__link dropdown-toggle" href="#" id="navDropdownFirst" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Пигменты</a>
-                                <div class="dropdown-menu" aria-labelledby="navDropdownFirst">
-                                    <a class="dropdown-item" href="#">пигмент №1</a>
-                                    <a class="dropdown-item" href="#">пигмент №2</a>
-                                </div>
-                            </li>
-                            <li class="nav__item dropdown">
-                                <a class="nav__link dropdown-toggle" href="#" id="navDropdownSecond" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Товары для ПМ</a>
-                                <div class="dropdown-menu" aria-labelledby="navDropdownSecond">
-                                    <a class="dropdown-item" href="#">товар №1</a>
-                                    <a class="dropdown-item" href="#">товар №2</a>
-                                </div>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Ремувер</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Акции</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Обучение</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <nav class="nav header__column">
+                    <ul class="nav__menu" id="navbar">
+                        <li class="nav__item dropdown">
+                            <a class="nav__link dropdown-toggle" href="#" id="navDropdownFirst" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Пигменты</a>
+                            <div class="dropdown-menu" aria-labelledby="navDropdownFirst">
+                                <a class="dropdown-item" href="#">пигмент №1</a>
+                                <a class="dropdown-item" href="#">пигмент №2</a>
+                            </div>
+                        </li>
+                        <li class="nav__item dropdown">
+                            <a class="nav__link dropdown-toggle" href="#" id="navDropdownSecond" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Товары для ПМ</a>
+                            <div class="dropdown-menu" aria-labelledby="navDropdownSecond">
+                                <a class="dropdown-item" href="#">товар №1</a>
+                                <a class="dropdown-item" href="#">товар №2</a>
+                            </div>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Ремувер</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Акции</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Обучение</a>
+                        </li>
+                    </ul>
+                </nav>
                 <!-- /. header column 2 -->
-                <div class="col-2 d-xxl-block d-none">
-                    <div class="phone">
-                        <svg class="phone__icon">
-                            <use xlink:href="#phone-menu"></use>
-                        </svg>
-                        <a class="phone__number" href="tel:8 (800) 555-35-35">8 (800) 555-35-35</a>
-                    </div>
+                <div class="phone header__column">
+                    <svg class="phone__icon">
+                        <use xlink:href="#phone-menu"></use>
+                    </svg>
+                    <a class="phone__number" href="tel:8 (800) 555-35-35">8 (800) 555-35-35</a>
                 </div>
                 <!-- /. header column 3 -->
-                <div class="col-xl-2 col-sm-4 header__column">
-                    <div class="header__icons">
-                        <ul class="icons">
-                            <li class="icons__item">
-                                <svg class="icons__image">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                            </li>
-                            <li class="icons__item">
-                                <svg class="icons__image">
-                                    <use xlink:href="#favorite"></use>
-                                </svg>
-                            </li>
-                            <li class="icons__item">
-                                <svg class="icons__image">
-                                    <use xlink:href="#store"></use>
-                                </svg>
-                            </li>
-                            <li class="icons__item">
-                                <svg class="icons__image icons__image-profile">
-                                    <use xlink:href="#profile"></use>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="header__icons header__column">
+                    <ul class="icons">
+                        <li class="icons__item">
+                            <svg class="icons__image">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </li>
+                        <li class="icons__item">
+                            <svg class="icons__image">
+                                <use xlink:href="#favorite"></use>
+                            </svg>
+                        </li>
+                        <li class="icons__item">
+                            <svg class="icons__image">
+                                <use xlink:href="#store"></use>
+                            </svg>
+                        </li>
+                        <li class="icons__item">
+                            <svg class="icons__image icons__image-profile">
+                                <use xlink:href="#profile"></use>
+                            </svg>
+                        </li>
+                    </ul>
                 </div>
                 <!-- /. header column 4 -->
-                <div class="col-xxl-1 col-xl-2 col-sm-4 header__column">
-                    <div class="header__button">
-                        <button class="btn--header btn--open visible navbar-toggler shadow-none" type="button"></button>
-                        <button class="btn--header btn--close navbar-toggler shadow-none" type="button"></button>
-                    </div>
+                <div class="header__button header__column">
+                    <button class="btn--header btn--open visible navbar-toggler shadow-none" type="button"></button>
+                    <button class="btn--header btn--close navbar-toggler shadow-none" type="button"></button>
                 </div>
                 <!-- /. header column 5 -->
             </div>
