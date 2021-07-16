@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <title>CEDRO task</title>
-    <link rel="stylesheet" href="assets/css/justValidateTooltip.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/common-resize.css">
@@ -273,99 +272,116 @@
                                 </div>
                                 <div class="row justify-content-start">
                                     <div class="w-100 pl-15 pt-4">
+
                                         <form class="form" id="needs-validation" autocomplete="off" novalidate>
-                                            <fieldset class="form__section-1">
-                                                <legend class="form__title">Данные профиля</legend>
-                                                <div class="form-group">
-                                                    <label class="form__label" for="nameExample">ФИО</label>
-                                                    <input type="text" class="form-control shadow-none form__input"
-                                                        id="nameExample" name="name" autocomplete="off"
-                                                        placeholder="Алексеева Ульяна Евгеньевна" required>
-                                                    <div class="valid-feedback">
-                                                        Заполено корректно
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        Не заполнено
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form__label" for="emailExample">Почта</label>
-                                                    <input type="text" class="form-control shadow-none form__input"
-                                                        id="emailExample" name="email" autocomplete="off"
-                                                        placeholder="pochta07@mail.ru" required>
-                                                    <div class="valid-feedback">
-                                                        Заполено корректно
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        Введите верный email-адрес.
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form__label" for="numberExample">Телефон</label>
-                                                    <input type="tel" class="form-control shadow-none form__input"
-                                                        id="numberExample" name="tel" autocomplete="off"
-                                                        placeholder="+7 (999) 999-99-99" required>
-                                                    <div class="invalid-feedback">
-                                                        Не заполнено
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form__label" for="nicknameExample">Имя
-                                                        аккаунта</label>
-                                                    <input type="text" class="form-control form__input shadow-none"
-                                                        id="nicknameExample" autocomplete="off" placeholder="Alex Y.E"
-                                                        required>
-                                                    <div class="valid-feedback">
-                                                        Заполено корректно
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        Не заполнено
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form__label" for="instagramExample">Профиль в
-                                                        инстаграмм</label>
-                                                    <input type="text" class="form-control form__input shadow-none"
-                                                        id="instagramExample" placeholder="@Alex_YE" required>
-                                                    <div class="valid-feedback">
-                                                        Заполено корректно
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        Не заполнено
-                                                    </div>
-                                                </div>
-                                                <div class="form-group form-group-address">
-                                                    <label class="form__label" for="city">Адрес доставки</label>
-                                                    <input type="text" class="form-control shadow-none form__input"
-                                                        id="city" autocomplete="off" placeholder="Город, улица, дом"
-                                                        required>
-                                                    <div class="invalid-feedback">
-                                                        Пожалуйста, укажите корректный адрес доставки
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                            <div class="row justify-content-center">
-                                                <div class="col-12">
-                                                    <fieldset class="form__section-2">
-                                                        <legend class="form__title">Изменить пароль</legend>
-                                                        <div class="form-group">
-                                                            <label class="form__label password-hidden"
-                                                                for="oldPassword">Старый
-                                                                пароль</label>
-                                                            <input type="password" class="form-control shadow-none"
-                                                                id="oldPassword" autocomplete="off" required>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <fieldset class="form__section-1">
+                                                        <legend class="form__title">Данные профиля</legend>
+                                                        <div class="col mb-4">
+                                                            <label class="form__label" for="nameExample">ФИО</label>
+                                                            <input type="text"
+                                                                class="form-control shadow-none form__input"
+                                                                id="nameExample" name="name" autocomplete="off"
+                                                                placeholder="Алексеева Ульяна Евгеньевна" required>
+                                                            <div class="valid-feedback">
+                                                                Заполено корректно
+                                                            </div>
+                                                            <div class="invalid-feedback">
+                                                                Это обязательное поле
+                                                            </div>
+                                                        </div>
+                                                        <div class="col mb-4">
+                                                            <label class="form__label" for="emailExample">Почта</label>
+                                                            <input type="text"
+                                                                class="form-control shadow-none form__input"
+                                                                id="emailExample" name="email" autocomplete="off"
+                                                                placeholder="pochta07@mail.ru" required>
+                                                            <div class="valid-feedback">
+                                                                Заполено корректно
+                                                            </div>
+                                                            <div class="invalid-feedback">
+                                                                Это обязательное поле
+                                                            </div>
+                                                        </div>
+                                                        <div class="col mb-4">
+                                                            <label class="form__label"
+                                                                for="numberExample">Телефон</label>
+                                                            <input type="tel"
+                                                                class="form-control shadow-none form__input"
+                                                                id="numberExample" name="tel" autocomplete="off"
+                                                                placeholder="+7 (999) 999-99-99" required>
+                                                            <div class="valid-feedback">
+                                                                Заполено корректно
+                                                            </div>
+                                                            <div class="invalid-feedback">
+                                                                Это обязательное поле
+                                                            </div>
+                                                        </div>
+                                                        <div class="col mb-4">
+                                                            <label class="form__label" for="nicknameExample">Имя
+                                                                аккаунта</label>
+                                                            <input type="text"
+                                                                class="form-control form__input shadow-none"
+                                                                id="nicknameExample" autocomplete="off"
+                                                                placeholder="Alex Y.E" required>
+                                                            <div class="valid-feedback">
+                                                                Заполено корректно
+                                                            </div>
                                                             <div class="invalid-feedback">
                                                                 Не заполнено
                                                             </div>
                                                         </div>
-                                                        <div class="form-group form-group-password">
+                                                        <div class="col mb-4">
+                                                            <label class="form__label" for="instagramExample">Профиль в
+                                                                инстаграмм</label>
+                                                            <div class="input-group has-validation">
+                                                                <span class="input-group-text">@</span>
+                                                                <input type="text"
+                                                                    class="form-control form__input shadow-none"
+                                                                    id="instagramExample" placeholder="Alex_YE"
+                                                                    required>
+                                                                <div class="invalid-feedback">
+                                                                    Не заполнено
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <label class="form__label" for="city">Адрес доставки</label>
+                                                            <input type="text"
+                                                                class="form-control shadow-none form__input" id="city"
+                                                                autocomplete="off" placeholder="Город, улица, дом"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Пожалуйста, укажите корректный адрес доставки
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <fieldset class="form__section-2">
+                                                        <legend class="form__title">Изменить пароль</legend>
+                                                        <div class="col mb-4">
+                                                            <label class="form__label password-hidden"
+                                                                for="oldPassword">Старый
+                                                                пароль</label>
+                                                            <input type="password" class="form-control shadow-none"
+                                                                id="oldPassword" autocomplete="off" minlength="5"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Пароль должен содержать минимум 5 символов
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
                                                             <label class="form__label" for="newPassword">Новый
                                                                 пароль</label>
                                                             <input type="password" class="form-control shadow-none"
-                                                                id="newPassword" autocomplete="off"
-                                                                placeholder="Введите новый пароль" required>
+                                                                id="newPassword" placeholder="Введите новый пароль"
+                                                                autocomplete="off" minlength="5" required>
                                                             <div class="invalid-feedback">
-                                                                Не заполнено
+                                                                Пароль должен содержать минимум 5 символов
                                                             </div>
                                                         </div>
                                                     </fieldset>
@@ -380,6 +396,7 @@
                                             </div>
                                         </form>
                                         <!-- /. form -->
+
                                     </div>
                                     <!-- /. profile column 2 -->
                                 </div>
@@ -617,9 +634,8 @@
     </main>
     <!-- /.main -->
     <footer class="footer fixed-bottom">
-        <div class="container">
-
-            <div class="row footer__section-1 justify-content-center">
+        <div class="container-md">
+            <div class="row footer__section-1">
                 <div class="col-md-4 col-sm-12">
                     <ul class="footer__column footer__column-first">
                         <li class="footer__item"><a class="footer__link footer__title" href="#">Продукция</a></li>
@@ -675,7 +691,6 @@
                 </div>
                 <!-- /. footer__section-1 column 3 -->
             </div>
-
             <div class="row footer__section-2 align-items-center">
                 <div class="col-md-3 px-0">
                     <ul class="social">
@@ -746,7 +761,8 @@
                                             <li class="footer__item"><a class="footer__link" href="#">Пигменты</a></li>
                                             <li class="footer__item"><a class="footer__link" href="#">Аппараты</a></li>
                                             <li class="footer__item"><a class="footer__link" href="#">Иглы</a></li>
-                                            <li class="footer__item"><a class="footer__link" href="#">Расходные материалы</a></li>
+                                            <li class="footer__item"><a class="footer__link" href="#">Расходные
+                                                    материалы</a></li>
                                         </ul>
                                     </div>
                                     <!-- /. footer__section-1 column 1 -->
@@ -811,7 +827,6 @@
     <!-- SCRIPTS -->
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.js"></script>
-    <script src="./assets/js/just-validate.js"></script>
     <script src="./assets/js/owl.carousel.js"></script>
     <script src="./assets/js/inputmask.js"></script>
     <script src="./assets/js/common.js"></script>

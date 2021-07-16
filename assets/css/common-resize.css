@@ -168,12 +168,12 @@
     .btn--close.visible {
         margin-right: 8px;
     }
-}
-
-@media (max-width: 320px) {
     .footer__copyright-text {
         font-size: 16px !important;
     }
+}
+
+@media (max-width: 320px) {
     .burger .footer__column-second {
         margin: 0 !important;
     }

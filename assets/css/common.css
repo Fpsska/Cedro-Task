@@ -29,6 +29,10 @@ input {
     background-color: #f7f7f7 !important;
     padding: 18px 16px !important;
 }
+.input-group-text {
+    border: none;
+}
+
 
 svg {
     fill: var(--secondary-color);
@@ -289,14 +293,7 @@ svg {
 .form-group {
     margin-bottom: 24px;
 }
-.form-group-address,
-.form-group-password {
-    margin: 0;
-}
 
-.form__input {
-    margin-top: 8px;
-}
 .form-control {
     outline: none !important;
     border: none !important;
@@ -477,6 +474,7 @@ svg {
 .footer {
     background-color: #131511;
     position: relative;
+    
 }
 .footer::before,
 .footer::after {
