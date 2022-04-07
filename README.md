@@ -1,3 +1,3 @@
-# Cedro-Task
-GH-PAGES:
-- [see more](https://fpsska.github.io/Cedro-Task/#)
+This project was create with Bootstrap v5.0
+
+### `Watch demo` _[Cedro-Task](https://fpsska.github.io/Cedro-Task/)_
